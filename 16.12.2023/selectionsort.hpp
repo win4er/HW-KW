@@ -4,7 +4,7 @@
 
 
 void swap(int& a, int& b);
-void SelectionSortDOWN(int* ar, int size);
+void SelectionSortDOWN(int*, int);
 void SelectionSortUP(int*, int);
 
 #endif
