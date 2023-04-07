@@ -9,5 +9,6 @@ void show_el(int* ar, int size);
 void random_Fill_ar(int* ar, int size, int min, int max);
 bool test_randomFill(int *ar, int size);
 bool test_randomFill(int *ar, int size);
+void show_Big_ar(int* ar, int size, char element);
 
 #endif

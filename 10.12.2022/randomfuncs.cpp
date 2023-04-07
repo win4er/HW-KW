@@ -1,5 +1,20 @@
 #include "randomfuncs.hpp"
 
+void show_Big_ar(int* ar, int size, char element) {
+    int count;
+    for (int k = 0; k < size; k+=count){
+        for (int i = k; (i < 9+k) && ar[i]==ar[i+1]; i++){
+            std::cout << ar[i] << element;
+        }
+        std::cout << ar[k] << element;
+        count = get_Count_Number(ar, size, ar[k]);
+        if (count > 10)
+            std::cout << "- " << count-10;
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
+
 int get_Count_Number(int* ar, int size, int number){
     int count = 0;
     for(int i = 0; i < size; count+=(ar[i]==number), i++);
