@@ -1,6 +1,10 @@
-#include <iostream>
-#include "time.h"
+#include "randomfuncs.hpp"
 
+int get_Count_Number(int* ar, int size, int number){
+    int count = 0;
+    for(int i = 0; i < size; count+=(ar[i]==number), i++);
+    return count;
+}
 
 void show_el(int* ar, int size){
     for (int i = 0; i < size; i++){
@@ -29,14 +33,5 @@ bool test_randomFill(int *ar, int size) {
     else {
         return true;
     }
-}
-
-int main() {
-    int ar[5] = {0, 0, 0, 0, 0};
-    random_Fill_ar(&ar[0], sizeof(ar) / sizeof(int), 10, 100);
-    show_el(&ar[0], sizeof(ar) / sizeof(int));
-    std::cout << test_randomFill(&ar[0], sizeof(ar) / sizeof(int));
-
-    return 0;
 }
 
